@@ -1,0 +1,19 @@
+Absolute Centerline Ensemble-RMS L2 Losses
+
+Definitions:
+  Hu(y,t) = sqrt(mean_i((u_pred_i(0.5,y,t) - u_ref_i(0.5,y,t))^2))
+  Hv(x,t) = sqrt(mean_i((v_pred_i(x,0.5,t) - v_ref_i(x,0.5,t))^2))
+
+  E_u_cl = mean_t sqrt(mean_y Hu(y,t)^2)
+  E_v_cl = mean_t sqrt(mean_x Hv(x,t)^2)
+  E_cl   = 0.5 * (E_u_cl + E_v_cl)
+
+Note:
+  These are absolute centerline ensemble-RMS L2 losses.
+  They are not relative L2 losses.
+
+Method          E_u_cl            E_v_cl            E_cl              
+----------------------------------------------------------------------
+Ours          2.111169e-04      1.716024e-04      1.913597e-04      
+DNS_128         1.860893e-03      1.488753e-03      1.674823e-03      
+DNS_64          8.513186e-03      6.614095e-03      7.563641e-03      

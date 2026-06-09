@@ -1,0 +1,6 @@
+quantity,method,corner,Averaging,Value,Std,Median,P95,n_traj,n_steps
+CornerVorticityAbsL2Loss,GNOT,BL,per-trajectory time-mean; ensemble statistics,0.0016313830261751718,0.0010064287888649182,0.00108818897180754,0.0035495888758014173,30,400
+CornerVorticityRelativeL2Loss,GNOT,BL,per-trajectory time-mean; ensemble statistics,0.00953088739261071,0.004113010601304861,0.008768955896927746,0.016108178164313428,30,400
+CornerVorticityAbsL2Loss,GNOT,BR,per-trajectory time-mean; ensemble statistics,0.0031432731596578375,0.0017589246491742112,0.002407532046563574,0.006511349765612972,30,400
+CornerVorticityRelativeL2Loss,GNOT,BR,per-trajectory time-mean; ensemble statistics,0.01066648717630137,0.004297961286065915,0.009792922237081208,0.017146407270041224,30,400
+CornerVorticityRelativeL2AvgCorners,GNOT,AVG_BL_BR,per-trajectory time-mean; ensemble statistics,0.010098687284456039,0.004157374227685881,0.00897918680188214,0.016627292717177323,30,400

@@ -1,0 +1,25 @@
+Group C/D Scalar Loss Summary
+
+Included diagnostics:
+  1. KineticEnergyAbsLoss
+  2. KineticEnergyRelativeLoss
+  3. TotalEnstrophyAbsLoss
+  4. TotalEnstrophyRelativeLoss
+
+Secondary-vortex / corner-vorticity diagnostics are not computed.
+
+Aggregation order:
+  1. Compute diagnostic for each trajectory and time step.
+  2. Convert prediction/reference diagnostic pair to per-trajectory loss.
+  3. For scalar values, first average each trajectory over time,
+     then aggregate over trajectories.
+
+Columns:
+  Value ± Std, where Std is computed over per-trajectory time-mean losses.
+
+Method      Quantity                        Value           Std             Median          P95             
+------------------------------------------------------------------------------------------------------------
+GNOT         KineticEnergyAbsLoss            8.061126e-05    6.903484e-05    5.627089e-05    2.060172e-04    
+GNOT         KineticEnergyRelativeLoss       4.496465e-03    2.934142e-03    3.862117e-03    8.689680e-03    
+GNOT         TotalEnstrophyAbsLoss           1.054721e-02    3.954230e-03    9.721543e-03    1.794035e-02    
+GNOT         TotalEnstrophyRelativeLoss      2.115752e-03    8.282337e-04    1.931844e-03    3.644082e-03    

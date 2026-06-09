@@ -1,0 +1,8 @@
+jax
+jaxlib
+dm-haiku
+optax
+numpy
+pandas
+xarray
+loguru

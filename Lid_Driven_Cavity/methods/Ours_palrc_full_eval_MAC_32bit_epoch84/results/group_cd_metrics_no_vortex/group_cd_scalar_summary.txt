@@ -1,0 +1,33 @@
+Group C/D Scalar Loss Summary
+
+Included diagnostics:
+  1. KineticEnergyAbsLoss
+  2. KineticEnergyRelativeLoss
+  3. TotalEnstrophyAbsLoss
+  4. TotalEnstrophyRelativeLoss
+
+Secondary-vortex / corner-vorticity diagnostics are not computed.
+
+Aggregation order:
+  1. Compute diagnostic for each trajectory and time step.
+  2. Convert prediction/reference diagnostic pair to per-trajectory loss.
+  3. For scalar values, first average each trajectory over time,
+     then aggregate over trajectories.
+
+Columns:
+  Value ± Std, where Std is computed over per-trajectory time-mean losses.
+
+Method      Quantity                        Value           Std             Median          P95             
+------------------------------------------------------------------------------------------------------------
+dns64       KineticEnergyAbsLoss            1.107029e-03    5.291993e-04    9.517827e-04    2.014313e-03    
+dns64       KineticEnergyRelativeLoss       6.129334e-02    1.002071e-02    6.005936e-02    7.591301e-02    
+dns64       TotalEnstrophyAbsLoss           8.695884e-01    2.324165e-01    8.739060e-01    1.190257e+00    
+dns64       TotalEnstrophyRelativeLoss      1.365646e-01    2.483418e-02    1.354757e-01    1.797597e-01    
+dns128      KineticEnergyAbsLoss            2.504282e-04    1.216556e-04    2.151073e-04    4.701637e-04    
+dns128      KineticEnergyRelativeLoss       1.389442e-02    2.410338e-03    1.357024e-02    1.769130e-02    
+dns128      TotalEnstrophyAbsLoss           1.915032e-01    5.178786e-02    1.908300e-01    2.612290e-01    
+dns128      TotalEnstrophyRelativeLoss      3.196356e-02    6.568322e-03    3.169969e-02    4.376247e-02    
+Ours        KineticEnergyAbsLoss            7.852592e-06    6.098851e-06    5.411354e-06    2.041018e-05    
+Ours        KineticEnergyRelativeLoss       4.219052e-04    2.215505e-04    3.884799e-04    8.876260e-04    
+Ours        TotalEnstrophyAbsLoss           4.452832e-03    1.819045e-03    4.079832e-03    7.543189e-03    
+Ours        TotalEnstrophyRelativeLoss      8.757927e-04    4.411545e-04    6.911524e-04    1.881144e-03    

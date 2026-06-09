@@ -1,0 +1,32 @@
+Paper-Consistent Corner-Vorticity Loss Summary
+
+Definitions:
+  omega = dv/dx - du/dy
+  n_c = floor(Nx / 3)
+  I_BL = {(i,j): 2 <= i < n_c,       2 <= j < n_c}
+  I_BR = {(i,j): Nx-n_c <= i < Nx-2, 2 <= j < n_c}
+
+  e_omega_s(t) = sqrt(sum_{I_s} (omega_pred - omega_ref)^2 dx dy)
+  e_rel_omega_s(t) = e_omega_s(t) / max(sqrt(sum_{I_s} omega_ref^2 dx dy), EPS0)
+
+Main paper indicator:
+  CornerVorticityRelativeL2AvgCorners
+  = 0.5 * (time-mean BL relative error + time-mean BR relative error)
+
+Method      Quantity                                Corner    Value           Std             Median          P95             
+------------------------------------------------------------------------------------------------------------------------------
+dns64       CornerVorticityAbsL2Loss                BL        1.013592e-02    5.134413e-03    8.723269e-03    1.845721e-02    
+dns64       CornerVorticityAbsL2Loss                BR        2.131173e-02    1.038187e-02    1.803526e-02    3.745106e-02    
+dns64       CornerVorticityRelativeL2Loss           BL        5.836887e-02    1.338446e-02    5.654944e-02    7.681104e-02    
+dns64       CornerVorticityRelativeL2Loss           BR        7.001385e-02    1.882718e-02    6.783024e-02    9.810179e-02    
+dns64       CornerVorticityRelativeL2AvgCorners     AVG_BL_BR 6.419136e-02    1.567657e-02    6.197221e-02    8.557537e-02    
+dns128      CornerVorticityAbsL2Loss                BL        2.247659e-03    1.144497e-03    1.937556e-03    4.223611e-03    
+dns128      CornerVorticityAbsL2Loss                BR        4.983003e-03    2.481429e-03    4.325617e-03    9.327037e-03    
+dns128      CornerVorticityRelativeL2Loss           BL        1.293932e-02    3.013459e-03    1.256283e-02    1.752149e-02    
+dns128      CornerVorticityRelativeL2Loss           BR        1.637103e-02    4.637312e-03    1.567035e-02    2.387835e-02    
+dns128      CornerVorticityRelativeL2AvgCorners     AVG_BL_BR 1.465518e-02    3.709522e-03    1.418400e-02    2.027700e-02    
+Ours        CornerVorticityAbsL2Loss                BL        1.455374e-03    3.738545e-04    1.296516e-03    2.233663e-03    
+Ours        CornerVorticityAbsL2Loss                BR        2.197593e-03    5.903545e-04    1.993110e-03    3.283930e-03    
+Ours        CornerVorticityRelativeL2Loss           BL        9.388770e-03    2.346441e-03    8.741540e-03    1.381079e-02    
+Ours        CornerVorticityRelativeL2Loss           BR        7.885709e-03    1.221787e-03    7.726740e-03    9.844908e-03    
+Ours        CornerVorticityRelativeL2AvgCorners     AVG_BL_BR 8.637239e-03    1.743561e-03    8.129873e-03    1.183620e-02    

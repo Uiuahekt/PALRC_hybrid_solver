@@ -1,0 +1,5 @@
+quantity,method,Averaging,Value,Std,Median,P95,n_traj,n_steps
+KineticEnergyAbsLoss,GNOT,per-trajectory time-mean; ensemble statistics,8.061125897802413e-05,6.903484136513439e-05,5.627089063636959e-05,0.00020601724344305677,30,400
+KineticEnergyRelativeLoss,GNOT,per-trajectory time-mean; ensemble statistics,0.004496464893563238,0.0029341422194937303,0.0038621170737685407,0.008689680069016858,30,400
+TotalEnstrophyAbsLoss,GNOT,per-trajectory time-mean; ensemble statistics,0.010547209421793621,0.003954230287929911,0.009721542596817016,0.017940349981188763,30,400
+TotalEnstrophyRelativeLoss,GNOT,per-trajectory time-mean; ensemble statistics,0.002115752350132753,0.0008282336785587313,0.0019318442402825983,0.0036440816345947123,30,400

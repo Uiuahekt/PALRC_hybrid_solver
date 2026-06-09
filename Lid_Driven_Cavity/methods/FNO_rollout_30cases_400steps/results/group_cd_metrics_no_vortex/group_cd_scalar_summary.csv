@@ -1,0 +1,5 @@
+quantity,method,Averaging,Value,Std,Median,P95,n_traj,n_steps
+KineticEnergyAbsLoss,FNO,per-trajectory time-mean; ensemble statistics,0.0001126673665130511,0.00010180508856238788,8.135803509503602e-05,0.0003418357286136592,30,400
+KineticEnergyRelativeLoss,FNO,per-trajectory time-mean; ensemble statistics,0.0066519520530741415,0.004788788542431621,0.0052301504201318115,0.01830740860315597,30,400
+TotalEnstrophyAbsLoss,FNO,per-trajectory time-mean; ensemble statistics,0.014415784393747645,0.006358661707191261,0.01256572313606739,0.026160648651421065,30,400
+TotalEnstrophyRelativeLoss,FNO,per-trajectory time-mean; ensemble statistics,0.0028140082038665163,0.0012150769741036316,0.0024064278750177814,0.0049749846119754365,30,400

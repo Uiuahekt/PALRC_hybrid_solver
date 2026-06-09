@@ -1,0 +1,22 @@
+Paper-Consistent Corner-Vorticity Loss Summary
+
+Definitions:
+  omega = dv/dx - du/dy
+  n_c = floor(Nx / 3)
+  I_BL = {(i,j): 2 <= i < n_c,        2 <= j < n_c}
+  I_BR = {(i,j): Nx-n_c <= i < Nx-2, 2 <= j < n_c}
+
+  e_omega_s(t) = sqrt(sum_{I_s} (omega_pred - omega_ref)^2 dx dy)
+  e_rel_omega_s(t) = e_omega_s(t) / max(sqrt(sum_{I_s} omega_ref^2 dx dy), EPS0)
+
+Main paper indicator:
+  CornerVorticityRelativeL2AvgCorners
+  = 0.5 * (time-mean BL relative error + time-mean BR relative error)
+
+Method      Quantity                                Corner    Value           Std             Median          P95             
+------------------------------------------------------------------------------------------------------------------------------
+FNO         CornerVorticityAbsL2Loss                BL        2.363900e-03    1.278626e-03    1.963050e-03    4.300318e-03    
+FNO         CornerVorticityAbsL2Loss                BR        3.509110e-03    2.078925e-03    2.777002e-03    7.290402e-03    
+FNO         CornerVorticityRelativeL2Loss           BL        1.492096e-02    6.929116e-03    1.319950e-02    2.789248e-02    
+FNO         CornerVorticityRelativeL2Loss           BR        1.267090e-02    6.551534e-03    1.017876e-02    2.569269e-02    
+FNO         CornerVorticityRelativeL2AvgCorners     AVG_BL_BR 1.379593e-02    6.695810e-03    1.178565e-02    2.640704e-02    
